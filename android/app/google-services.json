@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "698637353524",
+    "project_id": "tutorpro-fef8f",
+    "storage_bucket": "tutorpro-fef8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698637353524:android:1410a743c2a715b79b8061",
+        "android_client_info": {
+          "package_name": "com.example.tutorpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU-a_fohvGhi4Yc053749XyJ1_S7D0aag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
