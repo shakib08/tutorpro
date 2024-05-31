@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tutorpro/login.dart';
 import 'package:tutorpro/profile.dart';
+import 'package:tutorpro/tuitions.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -172,7 +173,9 @@ class _homebodyState extends State<homebody> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=> tuitionsPage()));
+                    },
                     child: Container(
                       width: size.width*0.45,
                       height: size.height*0.20,
