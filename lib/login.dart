@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tutorpro/Components/button.dart';
 import 'package:tutorpro/Components/textinput.dart';
+import 'package:tutorpro/admin.dart';
 import 'package:tutorpro/homepage.dart';
 import 'package:tutorpro/registration.dart';
 
@@ -60,13 +61,20 @@ class _loginState extends State<login> {
       if (credential.user != null) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text("Login Successful")),
-        );
+        ); 
+        if(emailcontroller.text=='admin@tutorpro.com' && passwordcontroller.text=='tutorpro'){
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => admin_home_page()),);
+        }
+        else{
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => home()),);
+        }
+        
+      }
 
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => home()),
-        );
-      } else {
+     
+
+      
+       else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text("Invalid Email or Password!")),
         );
@@ -113,7 +121,9 @@ class _loginState extends State<login> {
                 ),
                 SizedBox(height: size.height * 0.05),
                 customButton(
-                  onPressed: loginUser,
+                  onPressed:
+                  
+                   loginUser,
                   hintText: "Log in",
                   backgroundColor: Colors.black,
                 ),

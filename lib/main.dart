@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:tutorpro/admin.dart';
 import 'package:tutorpro/homepage.dart';
 import 'package:tutorpro/login.dart';
 import 'firebase_options.dart';
@@ -46,8 +47,20 @@ class AuthWrapper extends StatelessWidget {
               child: CircularProgressIndicator(),
             ),
           );
-        } else if (snapshot.hasData) {
-          return home(); // Replace with your actual home page
+        }
+         
+
+
+        
+         else if (snapshot.hasData) {
+          // Check if the logged-in user is an admin
+          final currentUser = snapshot.data!;
+          final isAdmin = currentUser.email == 'admin@tutorpro.com';
+          if (isAdmin) {
+            return admin_home_page(); // Redirect to admin page
+          } else {
+            return home(); // Redirect to regular user home page
+          }// Replace with your actual home page
         } else {
           return login(); // Replace with your actual login page
         }

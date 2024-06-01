@@ -219,7 +219,14 @@ class _RegistrationState extends State<Registration> {
                   texteditingcontroller: subject,
                   inputType: TextInputType.text,
                 ),
+
+
+
                 SizedBox(height: size.height * 0.02),
+
+
+
+
                 Container(
                   width: size.width * 0.8,
                   decoration: BoxDecoration(
@@ -245,6 +252,10 @@ class _RegistrationState extends State<Registration> {
                     ),
                   ),
                 ),
+
+
+
+                
                 SizedBox(height: size.height * 0.02),
                 textinput(
                   hintText: "Present Address",
