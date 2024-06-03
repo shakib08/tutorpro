@@ -132,15 +132,15 @@ class _tuitionBodyState extends State<tuitionBody> {
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, index) {
                   var userData =
-                      snapshot.data!.docs[index].data() as Map<String, dynamic>;
+                  snapshot.data!.docs[index].data() as Map<String, dynamic>;
                   var tuitionlocation = userData['location'] ?? 'Unknown';
                   var tuitionclass = userData['class'] ?? 'Unknown';
                   var tuitionSalary = userData['salary'] ?? 'Unknown';
                   var tuitionCode = userData['code'] ?? 'Unknown';
                   var days = userData['days'] ?? 'Unknown';
                   var description = userData['description'] ?? 'Unknown';
-                  var studentGender = userData['studentgender'] ?? 'Unknown';
-                  var tutorGender = userData['tutorgender'] ?? 'Unknown';
+                  var studentGender = userData['studentGender'] ?? 'Unknown';
+                  var tutorGender = userData['tutorGender'] ?? 'Unknown';
 
                   return GestureDetector(
                     onTap: () {

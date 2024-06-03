@@ -41,8 +41,7 @@ class NavigationDrawer extends StatefulWidget {
 class _NavigationDrawerState extends State<NavigationDrawer> {
   User? user = FirebaseAuth.instance.currentUser;
   String userName = "";
-   String? _profileImageUrl;
-
+ 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size; 
