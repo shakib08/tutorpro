@@ -53,7 +53,7 @@ class _TutorsCollectionBodyState extends State<TutorsCollectionBody> {
             }
 
             if (snapshot.data == null || snapshot.data!.docs.isEmpty) {
-              return const Center(child: Text('No tuitions found'));
+              return const Center(child: Text('No tutors found'));
             }
 
             return SingleChildScrollView(

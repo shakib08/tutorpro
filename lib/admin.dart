@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tutorpro/Admin%20Pages/ViewTuitions/viewTuitions.dart';
 import 'package:tutorpro/Admin%20Pages/addtuitions.dart';
 import 'package:tutorpro/Admin%20Pages/tutors/tutors.dart';
 import 'package:tutorpro/login.dart';
@@ -168,7 +169,9 @@ class _adminHomePageState extends State<adminHomePage> {
 
               //See Tuitions
                 GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>viewTuitions()));
+                },
                 child: Container(
                   padding: EdgeInsets.all(size.width * 0.02),
                   width: size.width*0.9,
